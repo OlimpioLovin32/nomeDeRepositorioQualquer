@@ -1,1 +1,124 @@
-Comentário qualquer.
+//Comentário qualquer.// Tutorial de como realizar um "git pull" 
+kaua_o_silveira@SN-354189 MINGW64 ~
+$ ssh-keygen -t ed25519 -C "kau0303@outlook.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/kaua_o_silveira/.ssh/id_ed25519):
+Created directory '/c/Users/kaua_o_silveira/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/kaua_o_silveira/.ssh/id_ed25519
+Your public key has been saved in /c/Users/kaua_o_silveira/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:YKzFlP6HQ+AH84IzYIIz4gpsQOowr+kgbGGYtF1g6xY kau0303@outlook.com
+The key's randomart image is:
++--[ED25519 256]--+
+|o. o  ..         |
+|O + o+=          |
+|O* E =*=         |
+|*B+ *++.+        |
+|*=.+.o =S.       |
+|+oo     + .      |
+|=o       o       |
+|=                |
+| .               |
++----[SHA256]-----+
+
+kaua_o_silveira@SN-354189 MINGW64 ~
+$ cat ~/.ssh/id ed25519.pub
+cat: /c/Users/kaua_o_silveira/.ssh/id: No such file or directory
+cat: ed25519.pub: No such file or directory
+
+kaua_o_silveira@SN-354189 MINGW64 ~
+$ cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG9muFZMgp5RJ6k/ZTgJPf8lpQ2jtYATEOVOd8wQ0qEW kau0303@outlook.com
+
+kaua_o_silveira@SN-354189 MINGW64 ~
+$ ^C
+
+kaua_o_silveira@SN-354189 MINGW64 ~
+$ git clone "C:\Users\kaua_o_silveira\Downloads\gerenciamento-projetos"
+Cloning into 'gerenciamento-projetos'...
+fatal: 'C:\Users\kaua_o_silveira\Downloads\gerenciamento-projetos' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+kaua_o_silveira@SN-354189 MINGW64 ~
+$ git clone git@github.com:OlimpioLovin32/nomeDeRepositorioQualquer.git
+Cloning into 'nomeDeRepositorioQualquer'...
+The authenticity of host 'github.com (20.201.28.151)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,20.201.28.151' (ECDSA) to the list of known hosts.
+Enter passphrase for key '/c/Users/kaua_o_silveira/.ssh/id_ed25519':
+warning: You appear to have cloned an empty repository.
+
+kaua_o_silveira@SN-354189 MINGW64 ~
+$ cd "/c/Users/kaua_o_silveira/Downloads/gerenciamento-projetos"
+
+kaua_o_silveira@SN-354189 MINGW64 ~/Downloads/gerenciamento-projetos
+$ git clone git@github.com:OlimpioLovin32/nomeDeRepositorioQualquer.git
+Cloning into 'nomeDeRepositorioQualquer'...
+Enter passphrase for key '/c/Users/kaua_o_silveira/.ssh/id_ed25519':
+warning: You appear to have cloned an empty repository.
+
+kaua_o_silveira@SN-354189 MINGW64 ~/Downloads/gerenciamento-projetos
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+kaua_o_silveira@SN-354189 MINGW64 ~/Downloads/gerenciamento-projetos
+$ cd "/c/Users/kaua_o_silveira/Downloads/gerenciamento-projetos/nomeDeRepositorioQualquer"
+
+kaua_o_silveira@SN-354189 MINGW64 ~/Downloads/gerenciamento-projetos/nomeDeRepositorioQualquer (master)
+$ git add .
+
+kaua_o_silveira@SN-354189 MINGW64 ~/Downloads/gerenciamento-projetos/nomeDeRepositorioQualquer (master)
+$ git commit -m "a"
+[master (root-commit) 3e72f37] a
+ Committer: KAUÃ OLIMPIO DE SOUZA SILVEIRA <kaua_o_silveira@estudante.sesisenai.org.br>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 ueon.txt
+
+kaua_o_silveira@SN-354189 MINGW64 ~/Downloads/gerenciamento-projetos/nomeDeRepositorioQualquer (master)
+$ git push
+Enter passphrase for key '/c/Users/kaua_o_silveira/.ssh/id_ed25519':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 250 bytes | 250.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:OlimpioLovin32/nomeDeRepositorioQualquer.git
+ * [new branch]      master -> master
+
+kaua_o_silveira@SN-354189 MINGW64 ~/Downloads/gerenciamento-projetos/nomeDeRepositorioQualquer (master)
+$ git pull
+Enter passphrase for key '/c/Users/kaua_o_silveira/.ssh/id_ed25519':
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 918 bytes | 131.00 KiB/s, done.
+From github.com:OlimpioLovin32/nomeDeRepositorioQualquer
+   3e72f37..a13c6b8  master     -> origin/master
+Updating 3e72f37..a13c6b8
+Fast-forward
+ ueon.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+kaua_o_silveira@SN-354189 MINGW64 ~/Downloads/gerenciamento-projetos/nomeDeRepositorioQualquer (master)
+$
